@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5591966474912772817}
   - component: {fileID: 5591966474912772816}
   - component: {fileID: -7323479863891716704}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AppleG
-  m_TagString: Apple
+  m_TagString: AppleG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5591966475439294972}
   m_Father: {fileID: 0}
@@ -73,9 +74,9 @@ GameObject:
   - component: {fileID: 5591966475439294971}
   - component: {fileID: 5591966475439294970}
   - component: {fileID: 5591966475439294973}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AppleGreen
-  m_TagString: Apple
+  m_TagString: AppleG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,6 +91,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5591966474912772817}
   m_RootOrder: 0

@@ -4,43 +4,38 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
-
-
-public class Basket : MonoBehaviour
-{
-
-    [Header("Set in Inspector")]                                             // a
-
-    public GameObject basketPrefab;
-
-    public int numBaskets = 3;
-
-    public float basketBottomY = -14f;
-
-    public float basketSpacingY = 2f;
+using UnityEngine.UI;     // This line enables use of uGUI features.        // a
 
 
 
-    void Start()
-    {
+public class Basket : MonoBehaviour {
 
-        for (int i = 0; i < numBaskets; i++)
-        {
+    [Header("Set Dynamically")]
 
-            GameObject tBasketGO = Instantiate<GameObject>(basketPrefab);
+    public Text           scoreGT;                                          // a
 
-            Vector3 pos = Vector3.zero;
 
-            pos.y = basketBottomY + (basketSpacingY * i);
 
-            tBasketGO.transform.position = pos;
+    void Start() {
 
-        }
+        // Find a reference to the ScoreCounter GameObject
+
+        GameObject scoreGO = GameObject.Find("ScoreCounter");               // b
+
+        // Get the Text Component of that GameObject
+
+        scoreGT = scoreGO.GetComponent<Text>();                             // c
+
+        // Set the starting number of points to 0
+
+        scoreGT.text = "0";
 
     }
 
-    void Update()
-    {
+
+
+
+    void Update () {
 
         // Get the current screen position of the mouse from Input
 
@@ -56,7 +51,7 @@ public class Basket : MonoBehaviour
 
         // Convert the point from 2D screen space into 3D game world space
 
-        Vector3 mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D);    // c
+        Vector3 mousePos3D = Camera.main.ScreenToWorldPoint( mousePos2D );    // c
 
 
 
@@ -70,33 +65,29 @@ public class Basket : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision coll)
-    {                         // a
+    void OnCollisionEnter( Collision coll ) {                         // a
 
         // Find out what hit this basket
 
         GameObject collidedWith = coll.gameObject;                    // b
 
-        if (collidedWith.tag == "Apple")
-        {                          // c
+        if ( collidedWith.tag == "Apple" ) {                          // c
 
-            Destroy(collidedWith);
+            Destroy( collidedWith );
 
         }
 
-        //if (collidedWith.tag == "AppleG")
-        //{                          // c
+        if ( collidedWith.tag == "AppleG" ) {                          // c
 
-        //    Destroy(collidedWith);
+            Destroy( collidedWith );
 
-        //}
+        }
 
-        //if (collidedWith.tag == "MoldApple")
-        //{                          // c
+        if ( collidedWith.tag == "MoldApple" ) {                          // c
 
-        //    Destroy(collidedWith);
+            Destroy( collidedWith );
 
-        //}
+        }
     }
 
 }

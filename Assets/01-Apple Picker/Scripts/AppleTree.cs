@@ -57,20 +57,20 @@ public class AppleTree : MonoBehaviour
 
         if (Random.value < chanceForRed)
         {
-            GameObject appleR = Instantiate<GameObject>(applePrefab);      // c
-            appleR.transform.position = transform.position;                  // d
+            GameObject apple = Instantiate<GameObject>(applePrefab);      // c
+            apple.transform.position = transform.position;                  // d
         }
 
         if (Random.value > chanceForRed && Random.value < chanceForGreen)
         { 
-            GameObject appleG = Instantiate<GameObject>(applePrefabG);      // c
-            appleG.transform.position = transform.position;                  // d
+            GameObject apple = Instantiate<GameObject>(applePrefabG);      // c
+            apple.transform.position = transform.position;                  // d
         }
         
         if (Random.value > chanceForRed && Random.value > chanceForGreen)
         {
-        GameObject appleM = Instantiate<GameObject>(applePrefabM);      // c
-        appleM.transform.position = transform.position;                  // d
+        GameObject apple = Instantiate<GameObject>(applePrefabM);      // c
+        apple.transform.position = transform.position;                  // d
         }
 
         Invoke("DropApple", secondsBetweenAppleDrops);                // e
