@@ -54,8 +54,20 @@ public class ApplePicker : MonoBehaviour {
             Destroy( tGO );
 
         }
+        tAppleArray=GameObject.FindGameObjectsWithTag("AppleG"); // b
 
+        foreach ( GameObject tGO in tAppleArray ) {
 
+            Destroy( tGO );
+
+        }
+       tAppleArray=GameObject.FindGameObjectsWithTag("MoldApple"); // b
+
+        foreach ( GameObject tGO in tAppleArray ) {
+
+            Destroy( tGO );
+
+        }
         int basketIndex = basketList.Count-1;
 
         // Get a reference to that Basket GameObject
