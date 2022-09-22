@@ -6,6 +6,7 @@ using UnityEngine;
 
 using UnityEngine.SceneManagement;    
 
+using TMPro;
 
 
 public class ApplePicker : MonoBehaviour {
@@ -53,6 +54,7 @@ public class ApplePicker : MonoBehaviour {
             Destroy( tGO );
 
         }
+
 
         int basketIndex = basketList.Count-1;
 

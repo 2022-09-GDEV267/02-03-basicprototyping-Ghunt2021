@@ -6,13 +6,13 @@ using UnityEngine;
 
 using UnityEngine.UI;     // This line enables use of uGUI features.        // a
 
-
+using TMPro;
 
 public class Basket : MonoBehaviour {
 
     [Header("Set Dynamically")]
 
-    public Text           scoreGT;                                          // a
+    public TextMeshProUGUI           scoreGT;                                          // a
 
 
 
@@ -24,7 +24,7 @@ public class Basket : MonoBehaviour {
 
         // Get the Text Component of that GameObject
 
-        scoreGT = scoreGO.GetComponent<Text>();                             // c
+        scoreGT = scoreGO.GetComponent<TextMeshProUGUI>();                             // c
 
         // Set the starting number of points to 0
 

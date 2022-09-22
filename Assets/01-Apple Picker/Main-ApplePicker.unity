@@ -292,7 +292,7 @@ MonoBehaviour:
   speed: 100
   leftAndRightEdge: 20
   chanceToChangeDirections: 0.02
-  secondsBetweenAppleDrops: 0.002
+  secondsBetweenAppleDrops: 0.2
   chanceForRed: 0.7
   chanceForGreen: 0.7
   chanceForMold: 1
@@ -756,6 +756,7 @@ MonoBehaviour:
   numBaskets: 3
   basketBottomY: -14
   basketSpacingY: 2
+  basketList: []
 --- !u!1 &799612657
 GameObject:
   m_ObjectHideFlags: 0
