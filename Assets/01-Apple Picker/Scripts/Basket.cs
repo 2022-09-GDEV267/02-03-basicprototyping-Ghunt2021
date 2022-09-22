@@ -74,6 +74,22 @@ public class Basket : MonoBehaviour {
         if ( collidedWith.tag == "Apple" ) {                          // c
 
             Destroy( collidedWith );
+            int score = int.Parse( scoreGT.text );                          // d
+
+            // Add points for catching the apple
+
+            score += 100;
+
+            // Convert the score back to a string and display it
+
+            scoreGT.text = score.ToString();
+
+                if (score > HighScore.score) {
+
+                HighScore.score = score;
+
+            }
+
 
         }
 
@@ -81,11 +97,45 @@ public class Basket : MonoBehaviour {
 
             Destroy( collidedWith );
 
+            int score = int.Parse( scoreGT.text );                          // d
+
+            // Add points for catching the apple
+
+            score += 300;
+
+            // Convert the score back to a string and display it
+
+            scoreGT.text = score.ToString();
+                        
+                if (score > HighScore.score) {
+
+                HighScore.score = score;
+
+            }
+
+
         }
 
         if ( collidedWith.tag == "MoldApple" ) {                          // c
 
             Destroy( collidedWith );
+
+                        int score = int.Parse( scoreGT.text );                          // d
+
+            // Add points for catching the apple
+
+            score -= 200;
+
+            // Convert the score back to a string and display it
+
+            scoreGT.text = score.ToString();
+
+                if (score > HighScore.score) {
+
+                HighScore.score = score;
+
+            }
+
 
         }
     }
