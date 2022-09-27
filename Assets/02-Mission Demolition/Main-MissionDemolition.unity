@@ -314,59 +314,7 @@ Transform:
   - {fileID: 1659142038}
   - {fileID: 578291000}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &264752069
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 264752071}
-  - component: {fileID: 264752070}
-  m_Layer: 0
-  m_Name: Cloud
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &264752070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264752069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f77366ad13eab45718fd2154e19ffa32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cloudSphere: {fileID: 3206172671300059261, guid: 9675d9a914202b24baa324feb30ac082, type: 3}
-  numSpheresMin: 6
-  numSpheresMax: 10
-  sphereOffsetScale: {x: 30, y: 10, z: 10}
-  sphereScaleRangeX: {x: 3, y: 5}
-  sphereScaleRangeY: {x: 3, y: 4}
-  sphereScaleRangeZ: {x: 2, y: 3}
-  scaleYMin: 2
---- !u!4 &264752071
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264752069}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &282702105 stripped
 Transform:
@@ -727,13 +675,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773437844}
-  m_LocalRotation: {x: -0, y: -0.00000008940697, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: -6, z: 0}
+  m_LocalRotation: {x: -0, y: 0.13052616, z: -0, w: 0.9914449}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 879998168}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
 --- !u!122 &773437846
 Halo:
@@ -913,6 +861,7 @@ Transform:
   - {fileID: 1676178473}
   - {fileID: 14596287}
   - {fileID: 1770714502}
+  - {fileID: 773437845}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -15, z: 0}
