@@ -9,6 +9,10 @@ TagManager:
   - AppleG
   - Basket
   - Projectile
+  - Orb
+  - Gate
+  - golfBall
+  - Hole
   layers:
   - Default
   - TransparentFX
