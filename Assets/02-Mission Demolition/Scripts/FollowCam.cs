@@ -12,7 +12,6 @@ public class FollowCam : MonoBehaviour
     [Header("Set in Inspector")]
 
     public float easing = 0.05f;
-
     public Vector2 minXY = Vector2.zero;
 
     [Header("Set Dynamically")]
@@ -36,27 +35,70 @@ public class FollowCam : MonoBehaviour
 
         // if there's only one line following an if, it doesn't need braces
 
-        if (POI == null) return; // return if there is no poi                   // b
+        //--if (POI == null) return; // return if there is no poi                   // b
 
 
 
         // Get the position of the poi
 
-        Vector3 destination = POI.transform.position;
+        //-- Vector3 destination = POI.transform.position;
 
-        destination = Vector3.Lerp(transform.position, destination, easing);
+        Vector3 destination;
 
-        // Force destination.z to be camZ to keep the camera far enough away
+        // If there is no poi, return to P:[ 0, 0, 0 ]
 
-        destination.z = camZ;
+        if (POI == null)
+        {
 
-        // Set the camera to the destination
+            destination = Vector3.zero;
 
-        transform.position = destination;
+        }
+        else
+        {
 
-        Camera.main.orthographicSize = destination.y + 10;
+            // Get the position of the poi
 
+            destination = POI.transform.position;
 
+            // If poi is a Projectile, check to see if it's at rest
+
+            if (POI.tag == "Projectile")
+            {
+
+                // if it is sleeping (that is, not moving)
+
+                if (POI.GetComponent<Rigidbody>().IsSleeping() == true)
+                {
+
+                    // return to default view
+                    POI = null;
+
+                    // in the next update
+
+                    return;
+
+                }
+                // Limit the X & Y to minimum values
+
+                destination.x = Mathf.Max(minXY.x, destination.x);
+
+                destination.y = Mathf.Max(minXY.y, destination.y);
+
+                // Interpolate from the current Camera position toward destination
+
+                destination = Vector3.Lerp(transform.position, destination, easing);
+
+                // Force destination.z to be camZ to keep the camera far enough away
+
+                destination.z = camZ;
+
+                // Set the camera to the destination
+
+                transform.position = destination;
+
+                Camera.main.orthographicSize = destination.y + 10;
+
+            }
+        }
     }
-
 }
