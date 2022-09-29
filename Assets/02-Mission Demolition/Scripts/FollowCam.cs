@@ -67,7 +67,7 @@ public class FollowCam : MonoBehaviour
 
                 // if it is sleeping (that is, not moving)
 
-                if (POI.GetComponent<Rigidbody>().IsSleeping() == true)
+                if (POI.GetComponent<Rigidbody>().IsSleeping())
                 {
 
                     // return to default view
@@ -78,27 +78,31 @@ public class FollowCam : MonoBehaviour
                     return;
 
                 }
-                // Limit the X & Y to minimum values
+                else
+                {
 
-                destination.x = Mathf.Max(minXY.x, destination.x);
-
-                destination.y = Mathf.Max(minXY.y, destination.y);
-
-                // Interpolate from the current Camera position toward destination
-
-                destination = Vector3.Lerp(transform.position, destination, easing);
-
-                // Force destination.z to be camZ to keep the camera far enough away
-
-                destination.z = camZ;
-
-                // Set the camera to the destination
-
-                transform.position = destination;
-
-                Camera.main.orthographicSize = destination.y + 10;
-
+                }
             }
         }
+        // Limit the X & Y to minimum values
+
+        destination.x = Mathf.Max(minXY.x, destination.x);
+
+        destination.y = Mathf.Max(minXY.y, destination.y);
+
+        // Interpolate from the current Camera position toward destination
+
+        destination = Vector3.Lerp(transform.position, destination, easing);
+
+        // Force destination.z to be camZ to keep the camera far enough away
+
+        destination.z = camZ;
+
+        // Set the camera to the destination
+
+        transform.position = destination;
+
+        Camera.main.orthographicSize = destination.y + 10;
+
     }
 }

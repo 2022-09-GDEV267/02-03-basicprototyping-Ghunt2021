@@ -30,11 +30,11 @@ public class MissionDemolition : MonoBehaviour
 
     [Header("Set in Inspector")]
 
-    public TextMeshPro uitLevel;  // The UIText_Level Text
+    public TextMeshProUGUI uitLevel;  // The UIText_Level Text
 
-    public TextMeshPro uitShots;  // The UIText_Shots Text
+    public TextMeshProUGUI uitShots;  // The UIText_Shots Text
 
-    public TextMeshPro uitButton; // The Text on UIButton_View
+    public TextMeshProUGUI uitButton; // The Text on UIButton_View
 
     public Vector3 castlePos; // The place to put castles
 
