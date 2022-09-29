@@ -69,7 +69,7 @@ public class BallPhysics : MonoBehaviour
 
         // projectile = Instantiate(prefabProjectile) as GameObject;
 
-        golfBall.transform.position = launchZone;
+       // golfBall.transform.position = launchZone;
 
         // Set it to isKinematic for now
 
